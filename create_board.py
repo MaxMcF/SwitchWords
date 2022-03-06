@@ -22,7 +22,7 @@ class Node:
         self.letter.parents.append(self)
 
     def __str__(self):
-        return str(self.letter.id)
+        return str(self.letter.val)
 
 # class HeadNode(Node):
 
@@ -145,8 +145,8 @@ class Board:
                 position += 1
                 head = head.next_n
             query = f'SELECT * FROM words WHERE length(word) = {word.length}'
-            for pos, let in position_query:
-                query += f'AND letter{pos+1} = {let}'
+            for pos, let in position_query.items():
+                query += f' AND letter{pos+1} = \'{let}\' '
             query += ';'
             valid_words = self.query_db(query)
             new_word = choice(valid_words)
@@ -154,7 +154,7 @@ class Board:
         
 
     def populate_word(self, word_head, input_word):
-        ind = 1
+        ind = 0
         while word_head:
             if not word_head.letter.val:
                 word_head.letter.val = input_word[ind]
@@ -176,8 +176,8 @@ def create_cursor():
 
 def main():
     b = Board(3, 5, 7)
-    # b.visualize_struct()
     b.populate_board()
+    b.visualize_struct() 
     b.conn.close()
     # import pdb
 
