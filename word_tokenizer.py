@@ -25,9 +25,9 @@ def create_table(cur):
 def populate_table(cur):
     statements = []
     unique = set()
-    with open("wiki-100k.txt", "r") as f:
+    with open("./words/1000mostcommon.csv", "r") as f:
         lines = f.readlines()
-        for word in lines[1:]:
+        for word in lines[:]:
             word = word.strip().lower()
             if len(word) > 3 and len(word) < 13:
                 if word not in unique:
