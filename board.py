@@ -43,8 +43,6 @@ class Word:
                 else:
                     self.letters.append(Letter())
             counter += 1
-        print(['' if not letter else (letter.start, letter.end) for letter in self.letters])
-        print(length)
 
     def __len__(self):
         return self.length
@@ -86,7 +84,6 @@ class Board:
 
         for length in word_lengths[:-1]:
             probs = self.gen_probs(length)
-            print(probs)
             diff_len = randint(0, base_word - length)
             word_obj = Word(length=length, game_length=self.game_length, offset=diff_len)
             first = True
@@ -118,16 +115,16 @@ class Board:
         edges = []
         searched = set()
         print([word.word for word in self.words])
-        for word in self.words:
+        colors = ['red', 'blue', 'green', 'yellow', 'purple']
+        for ind, word in enumerate(self.words):
             letter_cleaned = [word for word in word.letters if word]
             for letter in letter_cleaned:
                 dot.node(str(letter), label=letter.val)
             for i in range(len(word.letters[:-1])):
                 if word.letters[i] and word.letters[i+1]:
-                    dot.edge(str(word.letters[i]), str(word.letters[i+1]), label=f"{word.word}")
+                    dot.edge(str(word.letters[i]), str(word.letters[i+1]), color=colors[ind])
         # print(dot.source)
         dot.render(view=True)
-
 
     def populate_board(self):
         base = self.words[0]
@@ -136,6 +133,7 @@ class Board:
         )
         base_word_row = choice(valid_words)
         base_word = base_word_row[0]
+        print(base_word)
         self.words[0].word = base_word
         i = 0
         for letter in self.words[0].letters:
@@ -191,11 +189,9 @@ class Board:
         for i in range(self.game_length):
             for j, k in product(range(len(self.words)), range(len(self.words))):
                 if j != k and self.words[j].letters[i] and self.words[k].letters[i]:
-                    print(j, k)
                     if self.words[j].letters[i].val == self.words[k].letters[i].val:
                         if not self.words[j].letters[i].start and not self.words[j].letters[i].end:
                             if not self.words[k].letters[i].start and not self.words[k].letters[i].end:
-                                print(self.words[j].letters[i],  self.words[k].letters[i])
                                 self.words[j].letters[i] = self.words[k].letters[i]
                     
                 
@@ -214,9 +210,22 @@ def create_cursor():
 
 
 def main():
-    b = Board(3, 5, 7)
+    
 
-    b.populate_board()
+    find = True
+    while find:
+        b = Board(5, 8, 12)
+        print('new board -----------------------------------')
+        counter = 0
+        while counter < 50 and find:
+            try: 
+                counter += 1
+                b.populate_board()
+                find = False
+            except:
+                pass
+            
+    
 
     # b.create_json()
     # b.visualize_struct()
