@@ -2,7 +2,7 @@
 *.csv
 *node_modules/*
 
-
+play_game/node_modules/*
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,python
