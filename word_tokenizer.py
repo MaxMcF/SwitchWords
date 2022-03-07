@@ -2,8 +2,6 @@ import sqlite3
 import pickle
 
 
-
-
 def create_table(cur):
     sql = """CREATE TABLE words (
    word varchar(32) PRIMARY KEY,
@@ -22,37 +20,45 @@ def create_table(cur):
 );"""
     cur.execute(sql)
     cur.commit
-    
+
 
 def populate_table(cur):
     statements = []
-    with open('fullWordList.csv', 'r') as f:
+    unique = set()
+    with open("wiki-100k.txt", "r") as f:
         lines = f.readlines()
         for word in lines[1:]:
-            word = word.strip()
+            word = word.strip().lower()
             if len(word) > 3 and len(word) < 13:
-                row = [word]
-                for letter in word:
-                    row.append(letter)
-                if len(row) <= 12:
-                    for _ in range(13-len(row)):
-                        row.append(None)
-                    print(len(row))
-                statements.append(tuple(row))
-    
+                if word not in unique:
+                    row = [word]
+                    punctuation = False
+                    print(word)
+                    for letter in word:
+                        if not (ord(letter) > ord('a') and ord(letter) < ord('z')):
+                            punctuation = True
+                            
+                        row.append(letter)
+
+                    if not punctuation:
+                        if len(row) <= 12:
+                            for _ in range(13 - len(row)):
+                                row.append(None)
+                        statements.append(tuple(row))
+                    unique.add(word)
+
     # pickle.dump(statements, 'formatted.pickle')
     # print(statements)
 
-
-    cur.executemany('INSERT INTO words VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);', statements)
-
-
-
+    cur.executemany(
+        "INSERT INTO words VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", statements
+    )
 
 
 def create_cursor():
-    con = sqlite3.connect('wordsDict.db')
+    con = sqlite3.connect("wordsDict.db")
     return con
+
 
 def main():
     con = create_cursor()
@@ -62,5 +68,5 @@ def main():
     con.close()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
