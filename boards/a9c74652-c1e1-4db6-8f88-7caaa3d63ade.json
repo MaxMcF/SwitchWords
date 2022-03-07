@@ -1,0 +1,237 @@
+{
+    "edges": {
+        "2c7695ad-e26d-4a4f-a60e-edd3e9438e5c": [
+            "c6eedd14-1ac8-44b8-a2f5-a353cb5cadfb"
+        ],
+        "41915700-5890-462f-a71d-1bc845cf28a2": [
+            "79225407-38f2-48af-b5fb-91cfef0d7b68"
+        ],
+        "46a7a981-55c0-4da9-85d2-8094fdc63952": [
+            "b6628e26-cfd8-4828-ae57-1311ab6846f9"
+        ],
+        "4ddb5006-9167-4356-8b73-4a9219ce1b33": [
+            "b6628e26-cfd8-4828-ae57-1311ab6846f9",
+            "b6628e26-cfd8-4828-ae57-1311ab6846f9"
+        ],
+        "67ad70b1-99b4-460a-98ea-b239803757fa": [
+            "46a7a981-55c0-4da9-85d2-8094fdc63952"
+        ],
+        "79225407-38f2-48af-b5fb-91cfef0d7b68": [
+            "4ddb5006-9167-4356-8b73-4a9219ce1b33",
+            "4ddb5006-9167-4356-8b73-4a9219ce1b33"
+        ],
+        "b6628e26-cfd8-4828-ae57-1311ab6846f9": [
+            "f48d4da9-c04c-4997-8df5-b9b411dce8be",
+            "f48d4da9-c04c-4997-8df5-b9b411dce8be",
+            "f48d4da9-c04c-4997-8df5-b9b411dce8be"
+        ],
+        "c6eedd14-1ac8-44b8-a2f5-a353cb5cadfb": [
+            "79225407-38f2-48af-b5fb-91cfef0d7b68"
+        ],
+        "f48d4da9-c04c-4997-8df5-b9b411dce8be": [
+            "de03df43-833e-4422-841f-f783bd4297bd",
+            "430b7e3e-2f4f-4892-9076-408561ce43f0",
+            "b170ffa2-b516-451d-98f8-8f08c59b6160"
+        ]
+    },
+    "nodes": [
+        {
+            "length": 7,
+            "letters": [
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "2c7695ad-e26d-4a4f-a60e-edd3e9438e5c",
+                    "is_merge": false,
+                    "letter": "t",
+                    "position": 0,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "c6eedd14-1ac8-44b8-a2f5-a353cb5cadfb",
+                    "is_merge": false,
+                    "letter": "h",
+                    "position": 1,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "79225407-38f2-48af-b5fb-91cfef0d7b68",
+                    "is_merge": false,
+                    "letter": "o",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "4ddb5006-9167-4356-8b73-4a9219ce1b33",
+                    "is_merge": false,
+                    "letter": "u",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "b6628e26-cfd8-4828-ae57-1311ab6846f9",
+                    "is_merge": false,
+                    "letter": "g",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "f48d4da9-c04c-4997-8df5-b9b411dce8be",
+                    "is_merge": false,
+                    "letter": "h",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "de03df43-833e-4422-841f-f783bd4297bd",
+                    "is_merge": false,
+                    "letter": "t",
+                    "position": 6,
+                    "start": false
+                }
+            ],
+            "offset": 0,
+            "word": "thought",
+            "word_id": "51846e7e-ab55-460a-9b2c-7dd7530893c5"
+        },
+        {
+            "length": 5,
+            "letters": [
+                {
+                    "empty": true,
+                    "position": 0
+                },
+                {
+                    "empty": true,
+                    "position": 1
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "67ad70b1-99b4-460a-98ea-b239803757fa",
+                    "is_merge": false,
+                    "letter": "r",
+                    "position": 2,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "46a7a981-55c0-4da9-85d2-8094fdc63952",
+                    "is_merge": false,
+                    "letter": "i",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "b6628e26-cfd8-4828-ae57-1311ab6846f9",
+                    "is_merge": false,
+                    "letter": "g",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "f48d4da9-c04c-4997-8df5-b9b411dce8be",
+                    "is_merge": false,
+                    "letter": "h",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "430b7e3e-2f4f-4892-9076-408561ce43f0",
+                    "is_merge": false,
+                    "letter": "t",
+                    "position": 6,
+                    "start": false
+                }
+            ],
+            "offset": 2,
+            "word": "right",
+            "word_id": "d03f5451-58c4-4e7c-9edb-a53c7aa65c20"
+        },
+        {
+            "length": 6,
+            "letters": [
+                {
+                    "empty": true,
+                    "position": 0
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "41915700-5890-462f-a71d-1bc845cf28a2",
+                    "is_merge": false,
+                    "letter": "b",
+                    "position": 1,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "79225407-38f2-48af-b5fb-91cfef0d7b68",
+                    "is_merge": false,
+                    "letter": "o",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "4ddb5006-9167-4356-8b73-4a9219ce1b33",
+                    "is_merge": false,
+                    "letter": "u",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "b6628e26-cfd8-4828-ae57-1311ab6846f9",
+                    "is_merge": false,
+                    "letter": "g",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "f48d4da9-c04c-4997-8df5-b9b411dce8be",
+                    "is_merge": false,
+                    "letter": "h",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "b170ffa2-b516-451d-98f8-8f08c59b6160",
+                    "is_merge": false,
+                    "letter": "t",
+                    "position": 6,
+                    "start": false
+                }
+            ],
+            "offset": 1,
+            "word": "bought",
+            "word_id": "fc1d1028-7658-45e3-b897-a99936e94a01"
+        }
+    ]
+}

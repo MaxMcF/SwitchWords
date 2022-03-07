@@ -5,12 +5,14 @@ from graphviz import Digraph
 import sqlite3
 from retrying import retry
 from itertools import product
+import argparse
+import json
 
 
 class Letter:
     def __init__(self, val=None, start=False, end=False):
         self.val = val
-        self.id = str(uuid4())[:5]
+        self.id = str(uuid4())
         self.ismerge = False
         self.start = start
         self.end = end
@@ -18,13 +20,23 @@ class Letter:
     def __str__(self):
         return str(self.val) + '.' + self.id
 
+    def get_dict(self):
+        letter_dict = {}
+        letter_dict['empty'] = False
+        letter_dict['letter'] = self.val
+        letter_dict['id'] = self.id
+        letter_dict['is_merge'] = self.ismerge
+        letter_dict['start'] = self.start
+        letter_dict['end'] = self.end
+        return letter_dict
+
 class Word:
     def __init__(self, length, game_length, offset, word=None):
         self.length = length
         self.game_length = game_length
         self.offset = offset
         self.word = word
-        self.word_id = uuid4()
+        self.word_id = str(uuid4())
         self.letters = []
         first = True
         counter = 1
@@ -50,6 +62,24 @@ class Word:
     def __str__(self):
         return self.word if self.word else ""
 
+
+    def get_dict(self):
+        output = {}
+        output['length'] = self.length
+        output['word'] = self.word
+        output['word_id'] = self.word_id
+        output['offset'] = self.offset
+        output['letters'] = []
+        for i, letter in enumerate(self.letters):
+            if not letter:
+                letter_dict = {}
+                letter_dict['empty'] = True
+            else:
+                letter_dict = letter.get_dict()
+            letter_dict['position'] = i
+            output['letters'].append(letter_dict)
+        return output
+
     def set_word(self, word):
         assert len(word) == self.length
         self.word = word
@@ -61,17 +91,14 @@ class Board:
         num_words,
         len_min,
         len_max,
-        max_ol_rate=0.5,
-        min_ol_rate=0.5,
-        len_vari=None,
-        bidir=False,
-        cyclic=False,
+        ol_rate=0.7,
     ):
+        self.id = str(uuid4())
+        self.num_words = num_words
+        self.len_min = len_min
+        self.len_max = len_max
+        self.ol_rate = ol_rate
         self.conn = create_cursor()
-
-        if len_vari:
-            len_min = randint(len_min, len_max - len_vari)
-            len_max = rand_range_start + len_vari
         self.words = []
 
         word_lengths = sorted([randint(len_min, len_max) for _ in range(num_words)])
@@ -93,7 +120,7 @@ class Board:
                     offset += 1
                 else:
                     merge_prob = probs.pop()
-                    if merge_prob >= 0.7 and not first and i != length + offset - 1:
+                    if merge_prob >= 1 - ol_rate and not first and i != length + offset - 1:
                         word_obj.letters[i] = base_word_obj.letters[i]
                     if first:
                         first = False
@@ -112,9 +139,6 @@ class Board:
 
     def visualize_struct(self):
         dot = Digraph()
-        edges = []
-        searched = set()
-        print([word.word for word in self.words])
         colors = ['red', 'blue', 'green', 'yellow', 'purple']
         for ind, word in enumerate(self.words):
             letter_cleaned = [word for word in word.letters if word]
@@ -123,7 +147,6 @@ class Board:
             for i in range(len(word.letters[:-1])):
                 if word.letters[i] and word.letters[i+1]:
                     dot.edge(str(word.letters[i]), str(word.letters[i+1]), color=colors[ind])
-        # print(dot.source)
         dot.render(view=True)
 
     def populate_board(self):
@@ -194,14 +217,17 @@ class Board:
                             if not self.words[k].letters[i].start and not self.words[k].letters[i].end:
                                 self.words[j].letters[i] = self.words[k].letters[i]
                     
-                
-
-    # def create_json(self):
-    #     for head in self.heads:
-    #         run = head
-    #         while run:
-    #             # print(run)
-    #             run = run.next_n
+    
+    def create_json(self):
+        output = {'nodes': [], 'edges': {}, 'game_length': self.game_length}
+        for word in self.words:
+            output['nodes'].append(word.get_dict())
+            for i in range(len(word.letters[:-1])):
+                if word.letters[i] and word.letters[i+1]:
+                    output['edges'][str(word.letters[i].id)] = output['edges'].get(str(word.letters[i].id), [])
+                    output['edges'][str(word.letters[i].id)].append(str(word.letters[i+1].id))
+        with open(f'./boards/{self.num_words}_{self.len_min}_{self.len_max}_{self.ol_rate}_{self.id}.json', 'w') as f:
+            f.write(json.dumps(output, indent=4, sort_keys=True))
 
 
 def create_cursor():
@@ -209,12 +235,11 @@ def create_cursor():
     return con
 
 
-def main():
+def main(num_letters, min_length, max_length, ol_rate):
     
-
     find = True
     while find:
-        b = Board(5, 8, 12)
+        b = Board(num_letters, min_length, max_length, ol_rate)
         print('new board -----------------------------------')
         counter = 0
         while counter < 50 and find:
@@ -224,18 +249,23 @@ def main():
                 find = False
             except:
                 pass
-            
     
-
-    # b.create_json()
-    # b.visualize_struct()
     b.merge_letters()
+    b.create_json()
     b.visualize_struct()
-    # b.conn.close()
-    # import pdb
+    b.conn.close()
 
-    # pdb.set_trace()
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('num_letters', metavar='N', type=int,
+                    help='Input the number of words for a board')
+    parser.add_argument('min_length', metavar='min', type=int,
+                    help='Minimum length of the auto generated words')
+    parser.add_argument('max_length', metavar='min', type=int,
+                    help='Maximum length of the auto generated words')
+    parser.add_argument('--ol_rate', default=0.3, type=float,
+                    help='Overlap rate as a percentage (default: thirty percent - 0.3)')
+    args = parser.parse_args()
+    main(args.num_letters, args.min_length, args.max_length, args.ol_rate)
