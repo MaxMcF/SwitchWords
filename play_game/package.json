@@ -1,0 +1,24 @@
+{
+  "name": "switchwords",
+  "version": "0.0.1",
+  "description": "initial version",
+  "main": "./play_game/script.js",
+  "dependencies": {
+    "d3": "^7.3.0",
+    "d3-dag": "^0.10.0",
+    "http-server": "^14.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxMcF/SwitchWords.git"
+  },
+  "author": "max mcfarland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaxMcF/SwitchWords/issues"
+  },
+  "homepage": "https://github.com/MaxMcF/SwitchWords#readme"
+}

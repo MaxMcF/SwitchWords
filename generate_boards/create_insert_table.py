@@ -25,7 +25,7 @@ def create_table(cur):
 def populate_table(cur):
     statements = []
     unique = set()
-    with open("./words/1000mostcommon.csv", "r") as f:
+    with open("../words/1000mostcommon.csv", "r") as f:
         lines = f.readlines()
         for word in lines[:]:
             word = word.strip().lower()
@@ -47,8 +47,6 @@ def populate_table(cur):
                         statements.append(tuple(row))
                     unique.add(word)
 
-    # pickle.dump(statements, 'formatted.pickle')
-    # print(statements)
 
     cur.executemany(
         "INSERT INTO words VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", statements

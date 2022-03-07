@@ -122,6 +122,7 @@ class Board:
                     merge_prob = probs.pop()
                     if merge_prob >= 1 - ol_rate and not first and i != length + offset - 1:
                         word_obj.letters[i] = base_word_obj.letters[i]
+                        word_obj.letters[i].ismerge = True
                     if first:
                         first = False
             self.words.append(word_obj)
@@ -213,8 +214,8 @@ class Board:
             for j, k in product(range(len(self.words)), range(len(self.words))):
                 if j != k and self.words[j].letters[i] and self.words[k].letters[i]:
                     if self.words[j].letters[i].val == self.words[k].letters[i].val:
-                        if not self.words[j].letters[i].start and not self.words[j].letters[i].end:
-                            if not self.words[k].letters[i].start and not self.words[k].letters[i].end:
+                        if not self.words[j].letters[i].start and not self.words[k].letters[i].start:
+                            if (not self.words[j].letters[i].end and not self.words[k].letters[i].end) or (self.words[j].letters[i].end and self.words[k].letters[i].end):
                                 self.words[j].letters[i] = self.words[k].letters[i]
                     
     
@@ -226,7 +227,7 @@ class Board:
                 if word.letters[i] and word.letters[i+1]:
                     output['edges'][str(word.letters[i].id)] = output['edges'].get(str(word.letters[i].id), [])
                     output['edges'][str(word.letters[i].id)].append(str(word.letters[i+1].id))
-        with open(f'./boards/{self.num_words}_{self.len_min}_{self.len_max}_{self.ol_rate}_{self.id}.json', 'w') as f:
+        with open(f'../boards/{self.num_words}_{self.len_min}_{self.len_max}_{self.ol_rate}_{self.id}.json', 'w') as f:
             f.write(json.dumps(output, indent=4, sort_keys=True))
 
 
@@ -254,7 +255,6 @@ def main(num_letters, min_length, max_length, ol_rate):
     b.create_json()
     b.visualize_struct()
     b.conn.close()
-
 
 
 if __name__ == "__main__":
