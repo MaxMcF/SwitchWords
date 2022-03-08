@@ -1,0 +1,244 @@
+{
+    "edges": {
+        "0238b90e-ed09-4192-85f3-033889501fd1": [
+            "28c0b148-6015-46e8-bd77-adf775d92afe"
+        ],
+        "08053136-f81b-4b34-95b2-86168101081f": [
+            "6a06e0ce-f9fe-4ddf-afe4-7bd85fb31640"
+        ],
+        "0aabcfb8-d3d6-4a02-9956-f6093c1e70fd": [
+            "1e66e760-a33c-4f7b-9ced-aae04c927c08",
+            "48793c07-376e-4098-bb23-ad07ab4d7e47"
+        ],
+        "1e66e760-a33c-4f7b-9ced-aae04c927c08": [
+            "2b33a338-b25d-48d6-aefc-b0ee86d55ff7"
+        ],
+        "28c0b148-6015-46e8-bd77-adf775d92afe": [
+            "de72d0e4-4196-4419-9dc9-ea5956542a81"
+        ],
+        "3f57f707-a3b1-4388-9b20-01df90798a0d": [
+            "de72d0e4-4196-4419-9dc9-ea5956542a81"
+        ],
+        "544a602b-14bd-4453-8db0-f617df516e4f": [
+            "de72d0e4-4196-4419-9dc9-ea5956542a81"
+        ],
+        "648c86a3-01e7-4d2c-869b-e8cf70c54d87": [
+            "3f57f707-a3b1-4388-9b20-01df90798a0d"
+        ],
+        "8169fedd-2992-43be-ba6e-777c02987fa3": [
+            "544a602b-14bd-4453-8db0-f617df516e4f"
+        ],
+        "a6982338-8f05-4a97-8cf3-4c66edbe3cb7": [
+            "648c86a3-01e7-4d2c-869b-e8cf70c54d87"
+        ],
+        "cca7ec8d-531c-4c59-94a5-1b90f708f779": [
+            "0238b90e-ed09-4192-85f3-033889501fd1"
+        ],
+        "de72d0e4-4196-4419-9dc9-ea5956542a81": [
+            "0aabcfb8-d3d6-4a02-9956-f6093c1e70fd",
+            "08053136-f81b-4b34-95b2-86168101081f",
+            "0aabcfb8-d3d6-4a02-9956-f6093c1e70fd"
+        ]
+    },
+    "game_length": 7,
+    "nodes": [
+        {
+            "length": 7,
+            "letters": [
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "a6982338-8f05-4a97-8cf3-4c66edbe3cb7",
+                    "is_merge": false,
+                    "letter": "s",
+                    "position": 0,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "648c86a3-01e7-4d2c-869b-e8cf70c54d87",
+                    "is_merge": false,
+                    "letter": "c",
+                    "position": 1,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "3f57f707-a3b1-4388-9b20-01df90798a0d",
+                    "is_merge": false,
+                    "letter": "i",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "de72d0e4-4196-4419-9dc9-ea5956542a81",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "0aabcfb8-d3d6-4a02-9956-f6093c1e70fd",
+                    "is_merge": false,
+                    "letter": "n",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "1e66e760-a33c-4f7b-9ced-aae04c927c08",
+                    "is_merge": false,
+                    "letter": "c",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "2b33a338-b25d-48d6-aefc-b0ee86d55ff7",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 6,
+                    "start": false
+                }
+            ],
+            "offset": 0,
+            "word": "science",
+            "word_id": "9d2b1d76-9f3f-4ca4-b5bf-fc83e290ab7e"
+        },
+        {
+            "length": 5,
+            "letters": [
+                {
+                    "empty": true,
+                    "position": 0
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "8169fedd-2992-43be-ba6e-777c02987fa3",
+                    "is_merge": false,
+                    "letter": "w",
+                    "position": 1,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "544a602b-14bd-4453-8db0-f617df516e4f",
+                    "is_merge": false,
+                    "letter": "h",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "de72d0e4-4196-4419-9dc9-ea5956542a81",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "08053136-f81b-4b34-95b2-86168101081f",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "6a06e0ce-f9fe-4ddf-afe4-7bd85fb31640",
+                    "is_merge": false,
+                    "letter": "l",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": true,
+                    "position": 6
+                }
+            ],
+            "offset": 1,
+            "word": "wheel",
+            "word_id": "3f2b8e56-65d7-4805-a211-5b5bc8006135"
+        },
+        {
+            "length": 6,
+            "letters": [
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "cca7ec8d-531c-4c59-94a5-1b90f708f779",
+                    "is_merge": false,
+                    "letter": "d",
+                    "position": 0,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "0238b90e-ed09-4192-85f3-033889501fd1",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 1,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "28c0b148-6015-46e8-bd77-adf775d92afe",
+                    "is_merge": false,
+                    "letter": "p",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "de72d0e4-4196-4419-9dc9-ea5956542a81",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "0aabcfb8-d3d6-4a02-9956-f6093c1e70fd",
+                    "is_merge": false,
+                    "letter": "n",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "48793c07-376e-4098-bb23-ad07ab4d7e47",
+                    "is_merge": false,
+                    "letter": "d",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": true,
+                    "position": 6
+                }
+            ],
+            "offset": 0,
+            "word": "depend",
+            "word_id": "d1fcf3fe-d556-4c4f-b5e0-0077ee7ccbec"
+        }
+    ]
+}

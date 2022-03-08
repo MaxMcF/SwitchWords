@@ -217,33 +217,18 @@ class Board:
                         if not self.words[j].letters[i].start and not self.words[k].letters[i].start:
                             if (not self.words[j].letters[i].end and not self.words[k].letters[i].end) or (self.words[j].letters[i].end and self.words[k].letters[i].end):
                                 self.words[j].letters[i] = self.words[k].letters[i]
-                                self.words[j].letters[i].ismerge = True
                     
     
     def create_json(self):
-        output = {'nodes': [], 'node_lookup': {}, 'edges': {}, 'edge_lookup': {}, 'formatted_edges': [], 'game_length': self.game_length}
+        output = {'nodes': [], 'edges': {}, 'game_length': self.game_length}
         for word in self.words:
             output['nodes'].append(word.get_dict())
-            for i in range(len(word.letters)):
-                if word.letters[i]:
-                    output['node_lookup'][str(word.letters[i].id)] = word.letters[i].get_dict()
+            for i in range(len(word.letters[:-1])):
+                if word.letters[i] and word.letters[i+1]:
                     output['edges'][str(word.letters[i].id)] = output['edges'].get(str(word.letters[i].id), [])
-                    if i-1 >= 0 and word.letters[i-1]:
-                        if str(word.letters[i-1].id) not in output['edges'][str(word.letters[i].id)]:
-                            output['edge_lookup'][str(word.letters[i].id)+'-'+str(word.letters[i-1].id)] = word.word
-                            output['edges'][str(word.letters[i].id)].append(str(word.letters[i-1].id))
-        
-        # import pdb; pdb.set_trace()
-
-        output['formatted_edges'] = []
-        for node_id, parent_ids in output['edges'].items():
-            output['formatted_edges'].append({'id': node_id, 'parentIds': parent_ids})
-        del output['edges']
-
-        with open(f'../boards/sample.json', 'w') as f:
+                    output['edges'][str(word.letters[i].id)].append(str(word.letters[i+1].id))
+        with open(f'../boards/{self.num_words}_{self.len_min}_{self.len_max}_{self.ol_rate}_{self.id}.json', 'w') as f:
             f.write(json.dumps(output, indent=4, sort_keys=True))
-        # with open(f'../boards/{self.num_words}_{self.len_min}_{self.len_max}_{self.ol_rate}_{self.id}.json', 'w') as f:
-        #     f.write(json.dumps(output, indent=4, sort_keys=True))
 
 
 def create_cursor():
@@ -254,19 +239,17 @@ def create_cursor():
 def main(num_letters, min_length, max_length, ol_rate):
     
     find = True
-    b = Board(num_letters, min_length, max_length, ol_rate)
-    b.populate_board()
-    # while find:
-    #     b = Board(num_letters, min_length, max_length, ol_rate)
-    #     print('new board -----------------------------------')
-    #     counter = 0
-    #     while counter < 50 and find:
-    #         try: 
-    #             counter += 1
-    #             b.populate_board()
-    #             find = False
-    #         except:
-    #             pass
+    while find:
+        b = Board(num_letters, min_length, max_length, ol_rate)
+        print('new board -----------------------------------')
+        counter = 0
+        while counter < 50 and find:
+            try: 
+                counter += 1
+                b.populate_board()
+                find = False
+            except:
+                pass
     
     b.merge_letters()
     b.create_json()

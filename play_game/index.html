@@ -1,17 +1,21 @@
-<!DOCTYPE HTML>
-
 <html>
 
 <head>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://unpkg.com/d3-dag@0.8.2"></script>
     <!-- <script src="https://unpkg.com/d3-dag@0.8.2"></script> -->
-    <script type="text/javascript" src='http://localhost:8000/play_game/script.js'></script>
-    <link rel="style.css" />
 </head>
 
 <body><svg></svg>
 
+    <script type="text/javascript">
+        (async () => {
+            // fetch data and render
+            const url = new URL("http://localhost:8000/boards/3_5_7_0.3_0666fcd1-7f6f-4add-9185-ef1643d2e072.json")
+            const resp = await fetch(url);
+            const data = await resp.json();
+            console.log(data)
+
+        })();
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,242 @@
+{
+    "edges": {
+        "37cb064d-30f9-4350-bfa7-743f29d7433c": [
+            "7b1ad991-4a2f-4848-8293-0bb6de193ee2"
+        ],
+        "62b668e5-b0b8-446b-9ef4-852c764a0808": [
+            "ef554399-db97-423e-879a-ca86ca42368e"
+        ],
+        "7b1ad991-4a2f-4848-8293-0bb6de193ee2": [
+            "ed4494d5-cb4d-425b-9359-90d96b5c664f",
+            "ed4494d5-cb4d-425b-9359-90d96b5c664f"
+        ],
+        "8632a922-b79b-459f-bc04-f7f9593a1e67": [
+            "88d72fa1-66af-4e27-82dd-0e44b82685aa"
+        ],
+        "883f900e-1dcc-444b-b670-83e815b8ad16": [
+            "b18508b4-3436-4e9f-b1a0-332ff874191a"
+        ],
+        "8ee9c57b-5c4b-4c4c-803b-27a00feeaa6b": [
+            "7b1ad991-4a2f-4848-8293-0bb6de193ee2",
+            "9a938019-7e24-4423-82dc-b2c713fdcda3"
+        ],
+        "9a938019-7e24-4423-82dc-b2c713fdcda3": [
+            "883f900e-1dcc-444b-b670-83e815b8ad16"
+        ],
+        "b4fb2dfc-067a-4a9d-aa24-df3182b83a04": [
+            "ef554399-db97-423e-879a-ca86ca42368e"
+        ],
+        "dd5e9454-5a32-4e0a-86a1-07abde60f410": [
+            "942f525c-a2e8-4070-b593-3405c5a24954"
+        ],
+        "ed4494d5-cb4d-425b-9359-90d96b5c664f": [
+            "dd5e9454-5a32-4e0a-86a1-07abde60f410",
+            "8632a922-b79b-459f-bc04-f7f9593a1e67"
+        ],
+        "ef554399-db97-423e-879a-ca86ca42368e": [
+            "8ee9c57b-5c4b-4c4c-803b-27a00feeaa6b",
+            "8ee9c57b-5c4b-4c4c-803b-27a00feeaa6b"
+        ]
+    },
+    "game_length": 7,
+    "nodes": [
+        {
+            "length": 7,
+            "letters": [
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "62b668e5-b0b8-446b-9ef4-852c764a0808",
+                    "is_merge": false,
+                    "letter": "b",
+                    "position": 0,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "ef554399-db97-423e-879a-ca86ca42368e",
+                    "is_merge": true,
+                    "letter": "e",
+                    "position": 1,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "8ee9c57b-5c4b-4c4c-803b-27a00feeaa6b",
+                    "is_merge": true,
+                    "letter": "l",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "7b1ad991-4a2f-4848-8293-0bb6de193ee2",
+                    "is_merge": true,
+                    "letter": "i",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "ed4494d5-cb4d-425b-9359-90d96b5c664f",
+                    "is_merge": true,
+                    "letter": "e",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "dd5e9454-5a32-4e0a-86a1-07abde60f410",
+                    "is_merge": false,
+                    "letter": "v",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "942f525c-a2e8-4070-b593-3405c5a24954",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 6,
+                    "start": false
+                }
+            ],
+            "offset": 0,
+            "word": "believe",
+            "word_id": "11a0aaeb-b776-46d5-b1d5-b88b9b32eef2"
+        },
+        {
+            "length": 5,
+            "letters": [
+                {
+                    "empty": true,
+                    "position": 0
+                },
+                {
+                    "empty": true,
+                    "position": 1
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "37cb064d-30f9-4350-bfa7-743f29d7433c",
+                    "is_merge": false,
+                    "letter": "f",
+                    "position": 2,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "7b1ad991-4a2f-4848-8293-0bb6de193ee2",
+                    "is_merge": true,
+                    "letter": "i",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "ed4494d5-cb4d-425b-9359-90d96b5c664f",
+                    "is_merge": true,
+                    "letter": "e",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "8632a922-b79b-459f-bc04-f7f9593a1e67",
+                    "is_merge": false,
+                    "letter": "l",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "88d72fa1-66af-4e27-82dd-0e44b82685aa",
+                    "is_merge": false,
+                    "letter": "d",
+                    "position": 6,
+                    "start": false
+                }
+            ],
+            "offset": 2,
+            "word": "field",
+            "word_id": "3db21fee-baa4-4136-b27b-435a2736d70d"
+        },
+        {
+            "length": 6,
+            "letters": [
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "b4fb2dfc-067a-4a9d-aa24-df3182b83a04",
+                    "is_merge": false,
+                    "letter": "s",
+                    "position": 0,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "ef554399-db97-423e-879a-ca86ca42368e",
+                    "is_merge": true,
+                    "letter": "e",
+                    "position": 1,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "8ee9c57b-5c4b-4c4c-803b-27a00feeaa6b",
+                    "is_merge": true,
+                    "letter": "l",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "9a938019-7e24-4423-82dc-b2c713fdcda3",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "883f900e-1dcc-444b-b670-83e815b8ad16",
+                    "is_merge": false,
+                    "letter": "c",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "b18508b4-3436-4e9f-b1a0-332ff874191a",
+                    "is_merge": false,
+                    "letter": "t",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": true,
+                    "position": 6
+                }
+            ],
+            "offset": 0,
+            "word": "select",
+            "word_id": "e87905e8-a2e7-44d9-bfe5-8a875a6c8bc8"
+        }
+    ]
+}

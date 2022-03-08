@@ -1,0 +1,234 @@
+{
+    "edges": {
+        "151aee45-daa7-48dd-8471-06402e70a486": [
+            "ea849c36-8351-4f53-a34e-2a93794f28ab"
+        ],
+        "2416a3b9-778d-4f1e-8dc8-67d524c1c9c1": [
+            "420e6124-5960-4ba8-a631-ea1f472bd4aa"
+        ],
+        "2c28a9f7-a145-416e-880a-6f3bc32da1a2": [
+            "ea849c36-8351-4f53-a34e-2a93794f28ab"
+        ],
+        "43941fc1-94f4-4ba1-bbfb-3470cf76c22e": [
+            "2c28a9f7-a145-416e-880a-6f3bc32da1a2"
+        ],
+        "6ccb6ec3-acad-4bf0-8299-3844ee462b20": [
+            "151aee45-daa7-48dd-8471-06402e70a486"
+        ],
+        "d135c57f-1d3f-496b-9bc7-b70f9df1b818": [
+            "2416a3b9-778d-4f1e-8dc8-67d524c1c9c1",
+            "ee9cf33b-2995-411e-ab1d-c449c1309fd4"
+        ],
+        "d92a42b0-cdad-4683-bab3-075184e10c67": [
+            "fe15ddd7-f416-44ae-a874-5096b4d3c048"
+        ],
+        "ea849c36-8351-4f53-a34e-2a93794f28ab": [
+            "fe15ddd7-f416-44ae-a874-5096b4d3c048",
+            "fe15ddd7-f416-44ae-a874-5096b4d3c048"
+        ],
+        "ee9cf33b-2995-411e-ab1d-c449c1309fd4": [
+            "420e6124-5960-4ba8-a631-ea1f472bd4aa"
+        ],
+        "fe15ddd7-f416-44ae-a874-5096b4d3c048": [
+            "d135c57f-1d3f-496b-9bc7-b70f9df1b818",
+            "d135c57f-1d3f-496b-9bc7-b70f9df1b818",
+            "90bb299c-6959-4ff2-bb55-a18cc5e4baa2"
+        ]
+    },
+    "game_length": 7,
+    "nodes": [
+        {
+            "length": 7,
+            "letters": [
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "43941fc1-94f4-4ba1-bbfb-3470cf76c22e",
+                    "is_merge": false,
+                    "letter": "s",
+                    "position": 0,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "2c28a9f7-a145-416e-880a-6f3bc32da1a2",
+                    "is_merge": false,
+                    "letter": "c",
+                    "position": 1,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "ea849c36-8351-4f53-a34e-2a93794f28ab",
+                    "is_merge": false,
+                    "letter": "i",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "fe15ddd7-f416-44ae-a874-5096b4d3c048",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "d135c57f-1d3f-496b-9bc7-b70f9df1b818",
+                    "is_merge": false,
+                    "letter": "n",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "2416a3b9-778d-4f1e-8dc8-67d524c1c9c1",
+                    "is_merge": false,
+                    "letter": "c",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "420e6124-5960-4ba8-a631-ea1f472bd4aa",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 6,
+                    "start": false
+                }
+            ],
+            "offset": 0,
+            "word": "science",
+            "word_id": "c44bfc60-1c0b-4d5b-aad6-ba3a5ce91c78"
+        },
+        {
+            "length": 5,
+            "letters": [
+                {
+                    "empty": true,
+                    "position": 0
+                },
+                {
+                    "empty": true,
+                    "position": 1
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "d92a42b0-cdad-4683-bab3-075184e10c67",
+                    "is_merge": false,
+                    "letter": "s",
+                    "position": 2,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "fe15ddd7-f416-44ae-a874-5096b4d3c048",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "d135c57f-1d3f-496b-9bc7-b70f9df1b818",
+                    "is_merge": false,
+                    "letter": "n",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "ee9cf33b-2995-411e-ab1d-c449c1309fd4",
+                    "is_merge": false,
+                    "letter": "s",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "420e6124-5960-4ba8-a631-ea1f472bd4aa",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 6,
+                    "start": false
+                }
+            ],
+            "offset": 2,
+            "word": "sense",
+            "word_id": "f17fb0e0-1720-4094-a04a-a8915299e619"
+        },
+        {
+            "length": 5,
+            "letters": [
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "6ccb6ec3-acad-4bf0-8299-3844ee462b20",
+                    "is_merge": false,
+                    "letter": "q",
+                    "position": 0,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "151aee45-daa7-48dd-8471-06402e70a486",
+                    "is_merge": false,
+                    "letter": "u",
+                    "position": 1,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "ea849c36-8351-4f53-a34e-2a93794f28ab",
+                    "is_merge": false,
+                    "letter": "i",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "fe15ddd7-f416-44ae-a874-5096b4d3c048",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "90bb299c-6959-4ff2-bb55-a18cc5e4baa2",
+                    "is_merge": false,
+                    "letter": "t",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": true,
+                    "position": 5
+                },
+                {
+                    "empty": true,
+                    "position": 6
+                }
+            ],
+            "offset": 0,
+            "word": "quiet",
+            "word_id": "f02b027c-9e64-4b35-bf3a-969f5376dee7"
+        }
+    ]
+}
