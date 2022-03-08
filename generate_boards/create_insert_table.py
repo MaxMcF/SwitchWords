@@ -19,7 +19,6 @@ def create_table(cur):
     letter12 varchar(1)
 );"""
     cur.execute(sql)
-    cur.commit
 
 
 def populate_table(cur):
@@ -60,7 +59,7 @@ def create_cursor():
 
 def main():
     con = create_cursor()
-    # create_table(cur)
+    # create_table(con.cursor())
     populate_table(con.cursor())
     con.commit()
     con.close()
