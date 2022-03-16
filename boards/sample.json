@@ -297,9 +297,9 @@
                 }
             ],
             "offset": 0,
+            "clue": "He ___, and he also attack",
             "word": "protect",
-            "word_id": "f0b51c8c-d4f6-476d-bcf3-62c4518cad08",
-            "clue": "He ___, and he also attack"
+            "word_id": "f0b51c8c-d4f6-476d-bcf3-62c4518cad08"
         },
         {
             "length": 6,
@@ -364,9 +364,9 @@
                 }
             ],
             "offset": 1,
+            "clue": "to become aware of",
             "word": "notice",
-            "word_id": "e0e058af-efe6-4d28-83a9-6d0a9a61e4fa",
-            "clue": "to become aware of"
+            "word_id": "e0e058af-efe6-4d28-83a9-6d0a9a61e4fa"
         },
         {
             "length": 6,
@@ -431,9 +431,9 @@
                 }
             ],
             "offset": 1,
+            "clue": "A way of doing things",
             "word": "method",
-            "word_id": "507788cb-89da-442c-bd31-f53eaa25b7da",
-            "clue": "A way of doing things"
+            "word_id": "507788cb-89da-442c-bd31-f53eaa25b7da"
         }
     ]
 }

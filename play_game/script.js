@@ -16,7 +16,6 @@ const eventListenerObj = Object();
         .decross(d3.decrossOpt()) // minimize number of crossings
         .nodeSize((node) => [(node ? 3.6 : 0.25) * nodeRadius, 3 * nodeRadius]); // set node size instead of constraining to fit
     var { width, height } = layout(dag);
-    width = Number(width) * 2
     // --------------------------------
     // This code only handles rendering
     // --------------------------------
@@ -301,7 +300,11 @@ const eventListenerObj = Object();
     }
 
     function show_clue(clue, color){
-        document.getElementById('clue-box').setAttribute('border', `15px solid ${color}`)
+        document.getElementById('clue-box').setAttribute('style', `width: auto;
+            float: left;
+            margin: 12.5%;
+            padding: 12px;
+            border: 15px solid ${color};`)
         document.getElementById('clue-text').innerHTML = clue
     }
 
@@ -314,7 +317,6 @@ const eventListenerObj = Object();
             for (const [i, word_obj] of Object.entries(json_data['nodes'])){
                 if (word_obj['word_id'] == word_ids[0].attributes.word_id.nodeValue){
                     var word = word_obj[`word`]
-                    console.log(word_obj)
                     var clue = word_obj['clue']
                     break
                 }
@@ -332,7 +334,6 @@ const eventListenerObj = Object();
                     .style('fill', colorMap.get(word))
                     .lower()
                 })
-            console.log(clue)
             highlight_letter(letter_id, word_id)
             show_clue(clue, colorMap.get(word))
         
