@@ -8,6 +8,24 @@ const eventListenerObj = Object();
         "http://localhost:8000/boards/sample.json"
     );
     const json_data = await resp.json();
+
+
+    const parent_clue_box = document.getElementById('clue-box')
+    for (const [i, word] of Object.entries(json_data['nodes'])){
+        const clue_box = document.createElement('div')
+        clue_box.setAttribute('class', 'clues')
+        clue_box.setAttribute('style', 'margin-top: 2%; border: solid; text-align: center; margin-bottom: 2%; font-size: x-large;')
+        const highlight_box = document.createElement('div')
+        highlight_box.setAttribute('class', 'clue-highlight')
+        highlight_box.setAttribute('id', `clue-${i}`)
+        highlight_box.setAttribute('style', 'border: solid 10px; border-color: transparent; padding-top: 8%; padding-bottom: 8%;')
+        highlight_box.innerHTML = word.clue
+        clue_box.appendChild(highlight_box)
+        parent_clue_box.appendChild(clue_box)
+    }
+
+
+
     const dag = d3.dagStratify()(json_data['formatted_edges']);
 
     // const nodeRadius = 20;
@@ -299,13 +317,15 @@ const eventListenerObj = Object();
         }, false)
     }
 
-    function show_clue(clue, color){
-        document.getElementById('clue-box').setAttribute('style', `width: auto;
-            float: left;
-            margin: 12.5%;
-            padding: 12px;
-            border: 15px solid ${color};`)
-        document.getElementById('clue-text').innerHTML = clue
+    function show_clue(clue_num, color){
+
+        document.querySelectorAll('.clue-highlight')
+            .forEach((node) => {
+                node.setAttribute('style', 'border: solid 10px; padding-top: 8%; padding-bottom: 8%; border-color: transparent;')
+            })
+        clue_elem = document.getElementById(`clue-${clue_num}`)
+        clue_elem.setAttribute('style', `border: solid 10px; padding-top: 8%; padding-bottom: 8%; border-color: ${color};`)
+
     }
 
     function highlight_word(data) {
@@ -317,7 +337,7 @@ const eventListenerObj = Object();
             for (const [i, word_obj] of Object.entries(json_data['nodes'])){
                 if (word_obj['word_id'] == word_ids[0].attributes.word_id.nodeValue){
                     var word = word_obj[`word`]
-                    var clue = word_obj['clue']
+                    var clue_num = i
                     break
                 }
 
@@ -335,7 +355,7 @@ const eventListenerObj = Object();
                     .lower()
                 })
             highlight_letter(letter_id, word_id)
-            show_clue(clue, colorMap.get(word))
+            show_clue(clue_num, colorMap.get(word))
         
         }
     }

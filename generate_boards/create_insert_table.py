@@ -16,7 +16,8 @@ def create_table(cur):
     letter9 varchar(1),
     letter10 varchar(1),
     letter11 varchar(1),
-    letter12 varchar(1)
+    letter12 varchar(1),
+    description varchar(256)
 );"""
     cur.execute(sql)
     cur.commit
@@ -27,8 +28,11 @@ def populate_table(cur):
     unique = set()
     with open("../words/1000mostcommon.csv", "r") as f:
         lines = f.readlines()
-        for word in lines[:]:
+        for line in lines[:]:
+            word, description = line.split(',')
             word = word.strip().lower()
+            description = description.strip()
+
             if len(word) > 3 and len(word) < 13:
                 if word not in unique:
                     row = [word]
@@ -44,12 +48,13 @@ def populate_table(cur):
                         if len(row) <= 12:
                             for _ in range(13 - len(row)):
                                 row.append(None)
+                        row.append(description)
                         statements.append(tuple(row))
                     unique.add(word)
 
 
     cur.executemany(
-        "INSERT INTO words VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", statements
+        "INSERT INTO words VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", statements
     )
 
 
@@ -60,7 +65,7 @@ def create_cursor():
 
 def main():
     con = create_cursor()
-    # create_table(cur)
+    create_table(con.cursor())
     populate_table(con.cursor())
     con.commit()
     con.close()

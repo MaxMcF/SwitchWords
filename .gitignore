@@ -1,5 +1,6 @@
 .venv/
 *.csv
+!*1000mostcommon.csv
 *node_modules/*
 
 play_game/node_modules/*
