@@ -3,6 +3,8 @@ import pickle
 
 
 def create_table(cur):
+    sql = "DROP TABLE words;"
+    cur.execute(sql)
     sql = """CREATE TABLE words (
    word varchar(32) PRIMARY KEY,
     letter1 varchar(1),
@@ -19,8 +21,9 @@ def create_table(cur):
     letter12 varchar(1),
     description varchar(256)
 );"""
+    
     cur.execute(sql)
-    cur.commit
+    # cur.commitw
 
 
 def populate_table(cur):
@@ -29,7 +32,11 @@ def populate_table(cur):
     with open("../words/1000mostcommon.csv", "r") as f:
         lines = f.readlines()
         for line in lines[:]:
-            word, description = line.split(',')
+            if ',' in line:
+                word, description = line.split(',')
+            else:
+                word = line
+                description = ''
             word = word.strip().lower()
             description = description.strip()
 

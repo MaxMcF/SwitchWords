@@ -152,9 +152,11 @@ class Board:
 
     def populate_board(self):
         base = self.words[0]
+
         valid_words = self.query_db(
             f"SELECT * FROM words WHERE length(word) = {base.length}"
         )
+        print(valid_words, base.length, base)
         base_word_row = choice(valid_words)
         base_word = base_word_row[0]
         print(base_word)
