@@ -260,19 +260,19 @@ def create_cursor():
 def main(num_letters, min_length, max_length, ol_rate):
     
     find = True
-    b = Board(num_letters, min_length, max_length, ol_rate)
-    b.populate_board()
-    # while find:
-    #     b = Board(num_letters, min_length, max_length, ol_rate)
-    #     print('new board -----------------------------------')
-    #     counter = 0
-    #     while counter < 50 and find:
-    #         try: 
-    #             counter += 1
-    #             b.populate_board()
-    #             find = False
-    #         except:
-    #             pass
+    # b = Board(num_letters, min_length, max_length, ol_rate)
+    # b.populate_board()
+    while find:
+        b = Board(num_letters, min_length, max_length, ol_rate)
+        print('new board -----------------------------------')
+        counter = 0
+        while counter < 50 and find:
+            try: 
+                counter += 1
+                b.populate_board()
+                find = False
+            except:
+                pass
     
     b.merge_letters()
     b.create_json()

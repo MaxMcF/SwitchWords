@@ -349,10 +349,14 @@ const eventListenerObj = Object();
                 d3.select(`[letter_id='${node.data.id}']`)
                     .append('circle')
                     .attr('class', 'highlight')
-                    .attr('r', larger_rad)
                     .style('stroke', colorMap.get(word))
                     .style('fill', colorMap.get(word))
                     .lower()
+                    .transition()
+                    .duration(100000)
+                    .attrTween("r", function() {
+                        return d3.interpolateNumber(0, larger_rad);
+                      })
                 })
             highlight_letter(letter_id, word_id)
             show_clue(clue_num, colorMap.get(word))
