@@ -1,415 +1,377 @@
 {
     "edge_lookup": {
-        "014056cd-545e-42c9-867d-aae7748872e2-d9664e88-e533-4b17-9c61-480a4edfa25d": "degree",
-        "0582cb01-5fe7-4668-b668-543248918a0e-6ac1ff69-0b51-46a5-b4f6-f8cc21ef5d5c": "energy",
-        "2475a2c9-e092-42df-8e7b-e9e9e7d010bc-d4f5bb45-9637-4d67-8d3d-6b11ee909e37": "degree",
-        "368cfc07-ce63-41d2-af9a-d7ecda0f89f2-aeba2729-eabe-4bcc-a43f-e88a38290f83": "until",
-        "368cfc07-ce63-41d2-af9a-d7ecda0f89f2-c12bad42-b6ec-4852-b729-36ad68b92ad0": "energy",
-        "444b02d5-f29f-4e2a-93e9-9b9827317e82-014056cd-545e-42c9-867d-aae7748872e2": "degree",
-        "6ac1ff69-0b51-46a5-b4f6-f8cc21ef5d5c-d4f5bb45-9637-4d67-8d3d-6b11ee909e37": "energy",
-        "87c3df47-f0d7-4ea3-8ee0-f070f7100fc3-2475a2c9-e092-42df-8e7b-e9e9e7d010bc": "degree",
-        "d4f5bb45-9637-4d67-8d3d-6b11ee909e37-444b02d5-f29f-4e2a-93e9-9b9827317e82": "degree",
-        "d4f5bb45-9637-4d67-8d3d-6b11ee909e37-e0a910ac-4b4d-45c6-9164-efc8eba27be6": "energy",
-        "d82e6d10-a9e3-4568-acd3-89bea0735293-eccf6d8b-e45c-445a-b74a-b756c5b6292b": "until",
-        "e0a910ac-4b4d-45c6-9164-efc8eba27be6-368cfc07-ce63-41d2-af9a-d7ecda0f89f2": "energy",
-        "ec8dd50e-8727-494d-b981-252e545480d6-368cfc07-ce63-41d2-af9a-d7ecda0f89f2": "until",
-        "eccf6d8b-e45c-445a-b74a-b756c5b6292b-ec8dd50e-8727-494d-b981-252e545480d6": "until"
+        "00611bd7-c9e2-490a-bc4b-4ea592af2ba8-962c68ee-0b9f-48dc-b598-15d90e829288": "brother",
+        "00611bd7-c9e2-490a-bc4b-4ea592af2ba8-b8f613da-897f-4967-817e-098c09a9b06a": "mother",
+        "00611bd7-c9e2-490a-bc4b-4ea592af2ba8-ef0568fc-4151-4936-8ac4-39dbd83eb770": "clothe",
+        "4571e03e-aae6-435e-93f2-1786c5883093-00611bd7-c9e2-490a-bc4b-4ea592af2ba8": "brother",
+        "50c7e8f9-e145-4057-90ae-2e3b98a2a9f6-915d5920-0f1f-485f-8c37-86f42abe6c66": "clothe",
+        "915d5920-0f1f-485f-8c37-86f42abe6c66-4571e03e-aae6-435e-93f2-1786c5883093": "brother",
+        "962c68ee-0b9f-48dc-b598-15d90e829288-b9887415-5389-4b4f-9f6b-25129fd841b6": "brother",
+        "af07565d-2769-4536-885e-53acb9bacc5b-915d5920-0f1f-485f-8c37-86f42abe6c66": "brother",
+        "b1e7c773-5c63-4598-b00e-9e797d792266-af07565d-2769-4536-885e-53acb9bacc5b": "brother",
+        "ef0568fc-4151-4936-8ac4-39dbd83eb770-6a9a9c81-a1f6-4e2a-b25a-b23a2c5c0ac6": "clothe"
     },
     "formatted_edges": [
         {
-            "id": "c12bad42-b6ec-4852-b729-36ad68b92ad0",
+            "id": "b9887415-5389-4b4f-9f6b-25129fd841b6",
             "parentIds": []
         },
         {
-            "id": "368cfc07-ce63-41d2-af9a-d7ecda0f89f2",
+            "id": "962c68ee-0b9f-48dc-b598-15d90e829288",
             "parentIds": [
-                "c12bad42-b6ec-4852-b729-36ad68b92ad0",
-                "aeba2729-eabe-4bcc-a43f-e88a38290f83"
+                "b9887415-5389-4b4f-9f6b-25129fd841b6"
             ]
         },
         {
-            "id": "e0a910ac-4b4d-45c6-9164-efc8eba27be6",
+            "id": "00611bd7-c9e2-490a-bc4b-4ea592af2ba8",
             "parentIds": [
-                "368cfc07-ce63-41d2-af9a-d7ecda0f89f2"
+                "962c68ee-0b9f-48dc-b598-15d90e829288",
+                "ef0568fc-4151-4936-8ac4-39dbd83eb770",
+                "b8f613da-897f-4967-817e-098c09a9b06a"
             ]
         },
         {
-            "id": "d4f5bb45-9637-4d67-8d3d-6b11ee909e37",
+            "id": "4571e03e-aae6-435e-93f2-1786c5883093",
             "parentIds": [
-                "e0a910ac-4b4d-45c6-9164-efc8eba27be6",
-                "444b02d5-f29f-4e2a-93e9-9b9827317e82"
+                "00611bd7-c9e2-490a-bc4b-4ea592af2ba8"
             ]
         },
         {
-            "id": "6ac1ff69-0b51-46a5-b4f6-f8cc21ef5d5c",
+            "id": "915d5920-0f1f-485f-8c37-86f42abe6c66",
             "parentIds": [
-                "d4f5bb45-9637-4d67-8d3d-6b11ee909e37"
+                "4571e03e-aae6-435e-93f2-1786c5883093"
             ]
         },
         {
-            "id": "0582cb01-5fe7-4668-b668-543248918a0e",
+            "id": "af07565d-2769-4536-885e-53acb9bacc5b",
             "parentIds": [
-                "6ac1ff69-0b51-46a5-b4f6-f8cc21ef5d5c"
+                "915d5920-0f1f-485f-8c37-86f42abe6c66"
             ]
         },
         {
-            "id": "aeba2729-eabe-4bcc-a43f-e88a38290f83",
+            "id": "b1e7c773-5c63-4598-b00e-9e797d792266",
+            "parentIds": [
+                "af07565d-2769-4536-885e-53acb9bacc5b"
+            ]
+        },
+        {
+            "id": "6a9a9c81-a1f6-4e2a-b25a-b23a2c5c0ac6",
             "parentIds": []
         },
         {
-            "id": "ec8dd50e-8727-494d-b981-252e545480d6",
+            "id": "ef0568fc-4151-4936-8ac4-39dbd83eb770",
             "parentIds": [
-                "368cfc07-ce63-41d2-af9a-d7ecda0f89f2"
+                "6a9a9c81-a1f6-4e2a-b25a-b23a2c5c0ac6"
             ]
         },
         {
-            "id": "eccf6d8b-e45c-445a-b74a-b756c5b6292b",
+            "id": "50c7e8f9-e145-4057-90ae-2e3b98a2a9f6",
             "parentIds": [
-                "ec8dd50e-8727-494d-b981-252e545480d6"
+                "915d5920-0f1f-485f-8c37-86f42abe6c66"
             ]
         },
         {
-            "id": "d82e6d10-a9e3-4568-acd3-89bea0735293",
-            "parentIds": [
-                "eccf6d8b-e45c-445a-b74a-b756c5b6292b"
-            ]
-        },
-        {
-            "id": "d9664e88-e533-4b17-9c61-480a4edfa25d",
+            "id": "b8f613da-897f-4967-817e-098c09a9b06a",
             "parentIds": []
-        },
-        {
-            "id": "014056cd-545e-42c9-867d-aae7748872e2",
-            "parentIds": [
-                "d9664e88-e533-4b17-9c61-480a4edfa25d"
-            ]
-        },
-        {
-            "id": "444b02d5-f29f-4e2a-93e9-9b9827317e82",
-            "parentIds": [
-                "014056cd-545e-42c9-867d-aae7748872e2"
-            ]
-        },
-        {
-            "id": "2475a2c9-e092-42df-8e7b-e9e9e7d010bc",
-            "parentIds": [
-                "d4f5bb45-9637-4d67-8d3d-6b11ee909e37"
-            ]
-        },
-        {
-            "id": "87c3df47-f0d7-4ea3-8ee0-f070f7100fc3",
-            "parentIds": [
-                "2475a2c9-e092-42df-8e7b-e9e9e7d010bc"
-            ]
         }
     ],
-    "game_length": 6,
+    "game_length": 7,
     "node_lookup": {
-        "014056cd-545e-42c9-867d-aae7748872e2": {
+        "00611bd7-c9e2-490a-bc4b-4ea592af2ba8": {
             "empty": false,
             "end": false,
-            "id": "014056cd-545e-42c9-867d-aae7748872e2",
-            "is_merge": false,
-            "letter": "e",
-            "start": false
-        },
-        "0582cb01-5fe7-4668-b668-543248918a0e": {
-            "empty": false,
-            "end": true,
-            "id": "0582cb01-5fe7-4668-b668-543248918a0e",
-            "is_merge": false,
-            "letter": "y",
-            "start": false
-        },
-        "2475a2c9-e092-42df-8e7b-e9e9e7d010bc": {
-            "empty": false,
-            "end": false,
-            "id": "2475a2c9-e092-42df-8e7b-e9e9e7d010bc",
-            "is_merge": false,
-            "letter": "e",
-            "start": false
-        },
-        "368cfc07-ce63-41d2-af9a-d7ecda0f89f2": {
-            "empty": false,
-            "end": false,
-            "id": "368cfc07-ce63-41d2-af9a-d7ecda0f89f2",
+            "id": "00611bd7-c9e2-490a-bc4b-4ea592af2ba8",
             "is_merge": true,
-            "letter": "n",
+            "letter": "o",
             "start": false
         },
-        "444b02d5-f29f-4e2a-93e9-9b9827317e82": {
+        "4571e03e-aae6-435e-93f2-1786c5883093": {
             "empty": false,
             "end": false,
-            "id": "444b02d5-f29f-4e2a-93e9-9b9827317e82",
-            "is_merge": false,
-            "letter": "g",
+            "id": "4571e03e-aae6-435e-93f2-1786c5883093",
+            "is_merge": true,
+            "letter": "t",
             "start": false
         },
-        "6ac1ff69-0b51-46a5-b4f6-f8cc21ef5d5c": {
-            "empty": false,
-            "end": false,
-            "id": "6ac1ff69-0b51-46a5-b4f6-f8cc21ef5d5c",
-            "is_merge": false,
-            "letter": "g",
-            "start": false
-        },
-        "87c3df47-f0d7-4ea3-8ee0-f070f7100fc3": {
+        "50c7e8f9-e145-4057-90ae-2e3b98a2a9f6": {
             "empty": false,
             "end": true,
-            "id": "87c3df47-f0d7-4ea3-8ee0-f070f7100fc3",
+            "id": "50c7e8f9-e145-4057-90ae-2e3b98a2a9f6",
             "is_merge": false,
             "letter": "e",
             "start": false
         },
-        "aeba2729-eabe-4bcc-a43f-e88a38290f83": {
+        "6a9a9c81-a1f6-4e2a-b25a-b23a2c5c0ac6": {
             "empty": false,
             "end": false,
-            "id": "aeba2729-eabe-4bcc-a43f-e88a38290f83",
+            "id": "6a9a9c81-a1f6-4e2a-b25a-b23a2c5c0ac6",
             "is_merge": false,
-            "letter": "u",
+            "letter": "c",
             "start": true
         },
-        "c12bad42-b6ec-4852-b729-36ad68b92ad0": {
+        "915d5920-0f1f-485f-8c37-86f42abe6c66": {
             "empty": false,
             "end": false,
-            "id": "c12bad42-b6ec-4852-b729-36ad68b92ad0",
+            "id": "915d5920-0f1f-485f-8c37-86f42abe6c66",
+            "is_merge": true,
+            "letter": "h",
+            "start": false
+        },
+        "962c68ee-0b9f-48dc-b598-15d90e829288": {
+            "empty": false,
+            "end": false,
+            "id": "962c68ee-0b9f-48dc-b598-15d90e829288",
             "is_merge": false,
+            "letter": "r",
+            "start": false
+        },
+        "af07565d-2769-4536-885e-53acb9bacc5b": {
+            "empty": false,
+            "end": false,
+            "id": "af07565d-2769-4536-885e-53acb9bacc5b",
+            "is_merge": true,
             "letter": "e",
-            "start": true
+            "start": false
         },
-        "d4f5bb45-9637-4d67-8d3d-6b11ee909e37": {
+        "b1e7c773-5c63-4598-b00e-9e797d792266": {
             "empty": false,
-            "end": false,
-            "id": "d4f5bb45-9637-4d67-8d3d-6b11ee909e37",
+            "end": true,
+            "id": "b1e7c773-5c63-4598-b00e-9e797d792266",
             "is_merge": true,
             "letter": "r",
             "start": false
         },
-        "d82e6d10-a9e3-4568-acd3-89bea0735293": {
-            "empty": false,
-            "end": true,
-            "id": "d82e6d10-a9e3-4568-acd3-89bea0735293",
-            "is_merge": false,
-            "letter": "l",
-            "start": false
-        },
-        "d9664e88-e533-4b17-9c61-480a4edfa25d": {
+        "b8f613da-897f-4967-817e-098c09a9b06a": {
             "empty": false,
             "end": false,
-            "id": "d9664e88-e533-4b17-9c61-480a4edfa25d",
+            "id": "b8f613da-897f-4967-817e-098c09a9b06a",
             "is_merge": false,
-            "letter": "d",
+            "letter": "m",
             "start": true
         },
-        "e0a910ac-4b4d-45c6-9164-efc8eba27be6": {
+        "b9887415-5389-4b4f-9f6b-25129fd841b6": {
             "empty": false,
             "end": false,
-            "id": "e0a910ac-4b4d-45c6-9164-efc8eba27be6",
+            "id": "b9887415-5389-4b4f-9f6b-25129fd841b6",
             "is_merge": false,
-            "letter": "e",
-            "start": false
+            "letter": "b",
+            "start": true
         },
-        "ec8dd50e-8727-494d-b981-252e545480d6": {
+        "ef0568fc-4151-4936-8ac4-39dbd83eb770": {
             "empty": false,
             "end": false,
-            "id": "ec8dd50e-8727-494d-b981-252e545480d6",
+            "id": "ef0568fc-4151-4936-8ac4-39dbd83eb770",
             "is_merge": false,
-            "letter": "t",
-            "start": false
-        },
-        "eccf6d8b-e45c-445a-b74a-b756c5b6292b": {
-            "empty": false,
-            "end": false,
-            "id": "eccf6d8b-e45c-445a-b74a-b756c5b6292b",
-            "is_merge": false,
-            "letter": "i",
+            "letter": "l",
             "start": false
         }
     },
     "nodes": [
         {
-            "clue": "Power",
+            "clue": "\"Oh _______!\"",
+            "length": 7,
+            "letters": [
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "b9887415-5389-4b4f-9f6b-25129fd841b6",
+                    "is_merge": false,
+                    "letter": "b",
+                    "position": 0,
+                    "start": true
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "962c68ee-0b9f-48dc-b598-15d90e829288",
+                    "is_merge": false,
+                    "letter": "r",
+                    "position": 1,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "00611bd7-c9e2-490a-bc4b-4ea592af2ba8",
+                    "is_merge": true,
+                    "letter": "o",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "4571e03e-aae6-435e-93f2-1786c5883093",
+                    "is_merge": true,
+                    "letter": "t",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "915d5920-0f1f-485f-8c37-86f42abe6c66",
+                    "is_merge": true,
+                    "letter": "h",
+                    "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "af07565d-2769-4536-885e-53acb9bacc5b",
+                    "is_merge": true,
+                    "letter": "e",
+                    "position": 5,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "b1e7c773-5c63-4598-b00e-9e797d792266",
+                    "is_merge": true,
+                    "letter": "r",
+                    "position": 6,
+                    "start": false
+                }
+            ],
+            "offset": 0,
+            "word": "brother",
+            "word_id": "e502fa38-2e95-4020-97d1-bccc5eeee935"
+        },
+        {
+            "clue": "To equip garments",
             "length": 6,
             "letters": [
                 {
                     "empty": false,
                     "end": false,
-                    "id": "c12bad42-b6ec-4852-b729-36ad68b92ad0",
+                    "id": "6a9a9c81-a1f6-4e2a-b25a-b23a2c5c0ac6",
                     "is_merge": false,
-                    "letter": "e",
+                    "letter": "c",
                     "position": 0,
                     "start": true
                 },
                 {
                     "empty": false,
                     "end": false,
-                    "id": "368cfc07-ce63-41d2-af9a-d7ecda0f89f2",
-                    "is_merge": true,
-                    "letter": "n",
-                    "position": 1,
-                    "start": false
-                },
-                {
-                    "empty": false,
-                    "end": false,
-                    "id": "e0a910ac-4b4d-45c6-9164-efc8eba27be6",
-                    "is_merge": false,
-                    "letter": "e",
-                    "position": 2,
-                    "start": false
-                },
-                {
-                    "empty": false,
-                    "end": false,
-                    "id": "d4f5bb45-9637-4d67-8d3d-6b11ee909e37",
-                    "is_merge": true,
-                    "letter": "r",
-                    "position": 3,
-                    "start": false
-                },
-                {
-                    "empty": false,
-                    "end": false,
-                    "id": "6ac1ff69-0b51-46a5-b4f6-f8cc21ef5d5c",
-                    "is_merge": false,
-                    "letter": "g",
-                    "position": 4,
-                    "start": false
-                },
-                {
-                    "empty": false,
-                    "end": true,
-                    "id": "0582cb01-5fe7-4668-b668-543248918a0e",
-                    "is_merge": false,
-                    "letter": "y",
-                    "position": 5,
-                    "start": false
-                }
-            ],
-            "offset": 0,
-            "word": "energy",
-            "word_id": "6bf8531a-2dd5-4571-84d2-fda07a3e5864"
-        },
-        {
-            "clue": "Ending description",
-            "length": 5,
-            "letters": [
-                {
-                    "empty": false,
-                    "end": false,
-                    "id": "aeba2729-eabe-4bcc-a43f-e88a38290f83",
-                    "is_merge": false,
-                    "letter": "u",
-                    "position": 0,
-                    "start": true
-                },
-                {
-                    "empty": false,
-                    "end": false,
-                    "id": "368cfc07-ce63-41d2-af9a-d7ecda0f89f2",
-                    "is_merge": true,
-                    "letter": "n",
-                    "position": 1,
-                    "start": false
-                },
-                {
-                    "empty": false,
-                    "end": false,
-                    "id": "ec8dd50e-8727-494d-b981-252e545480d6",
-                    "is_merge": false,
-                    "letter": "t",
-                    "position": 2,
-                    "start": false
-                },
-                {
-                    "empty": false,
-                    "end": false,
-                    "id": "eccf6d8b-e45c-445a-b74a-b756c5b6292b",
-                    "is_merge": false,
-                    "letter": "i",
-                    "position": 3,
-                    "start": false
-                },
-                {
-                    "empty": false,
-                    "end": true,
-                    "id": "d82e6d10-a9e3-4568-acd3-89bea0735293",
+                    "id": "ef0568fc-4151-4936-8ac4-39dbd83eb770",
                     "is_merge": false,
                     "letter": "l",
+                    "position": 1,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "00611bd7-c9e2-490a-bc4b-4ea592af2ba8",
+                    "is_merge": true,
+                    "letter": "o",
+                    "position": 2,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "4571e03e-aae6-435e-93f2-1786c5883093",
+                    "is_merge": true,
+                    "letter": "t",
+                    "position": 3,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": false,
+                    "id": "915d5920-0f1f-485f-8c37-86f42abe6c66",
+                    "is_merge": true,
+                    "letter": "h",
                     "position": 4,
+                    "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "50c7e8f9-e145-4057-90ae-2e3b98a2a9f6",
+                    "is_merge": false,
+                    "letter": "e",
+                    "position": 5,
                     "start": false
                 },
                 {
                     "empty": true,
-                    "position": 5
+                    "position": 6
                 }
             ],
             "offset": 0,
-            "word": "until",
-            "word_id": "d04c23cb-116d-4120-924f-fb83edb1c34e"
+            "word": "clothe",
+            "word_id": "5b41bad6-16c0-41d2-851d-5d925ade52f7"
         },
         {
-            "clue": "",
+            "clue": "Maternal relative",
             "length": 6,
             "letters": [
                 {
+                    "empty": true,
+                    "position": 0
+                },
+                {
                     "empty": false,
                     "end": false,
-                    "id": "d9664e88-e533-4b17-9c61-480a4edfa25d",
+                    "id": "b8f613da-897f-4967-817e-098c09a9b06a",
                     "is_merge": false,
-                    "letter": "d",
-                    "position": 0,
+                    "letter": "m",
+                    "position": 1,
                     "start": true
                 },
                 {
                     "empty": false,
                     "end": false,
-                    "id": "014056cd-545e-42c9-867d-aae7748872e2",
-                    "is_merge": false,
-                    "letter": "e",
-                    "position": 1,
-                    "start": false
-                },
-                {
-                    "empty": false,
-                    "end": false,
-                    "id": "444b02d5-f29f-4e2a-93e9-9b9827317e82",
-                    "is_merge": false,
-                    "letter": "g",
+                    "id": "00611bd7-c9e2-490a-bc4b-4ea592af2ba8",
+                    "is_merge": true,
+                    "letter": "o",
                     "position": 2,
                     "start": false
                 },
                 {
                     "empty": false,
                     "end": false,
-                    "id": "d4f5bb45-9637-4d67-8d3d-6b11ee909e37",
+                    "id": "4571e03e-aae6-435e-93f2-1786c5883093",
                     "is_merge": true,
-                    "letter": "r",
+                    "letter": "t",
                     "position": 3,
                     "start": false
                 },
                 {
                     "empty": false,
                     "end": false,
-                    "id": "2475a2c9-e092-42df-8e7b-e9e9e7d010bc",
-                    "is_merge": false,
-                    "letter": "e",
+                    "id": "915d5920-0f1f-485f-8c37-86f42abe6c66",
+                    "is_merge": true,
+                    "letter": "h",
                     "position": 4,
                     "start": false
                 },
                 {
                     "empty": false,
-                    "end": true,
-                    "id": "87c3df47-f0d7-4ea3-8ee0-f070f7100fc3",
-                    "is_merge": false,
+                    "end": false,
+                    "id": "af07565d-2769-4536-885e-53acb9bacc5b",
+                    "is_merge": true,
                     "letter": "e",
                     "position": 5,
                     "start": false
+                },
+                {
+                    "empty": false,
+                    "end": true,
+                    "id": "b1e7c773-5c63-4598-b00e-9e797d792266",
+                    "is_merge": true,
+                    "letter": "r",
+                    "position": 6,
+                    "start": false
                 }
             ],
-            "offset": 0,
-            "word": "degree",
-            "word_id": "80a6a81b-c6ed-4ffd-9d87-6565f8f374fa"
+            "offset": 1,
+            "word": "mother",
+            "word_id": "7df7943b-49fe-4aeb-a792-05f4d7e24360"
         }
     ]
 }

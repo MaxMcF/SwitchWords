@@ -306,8 +306,12 @@ const eventListenerObj = Object();
                 .append('circle')
                 .attr('class', 'highlight')
                 .attr('id', 'letter_highlight')
-                .attr('r', larger_rad + 2)
                 .lower()
+                .transition()
+                .duration(500)
+                .attrTween("r", function() {
+                    return d3.interpolateNumber(0, larger_rad + 2);
+                    })
 
         document.addEventListener('keyup', eventListenerObj.fun=function _listener(event) {
             complete = input_letter(event, letter_id, word_id);
@@ -353,7 +357,7 @@ const eventListenerObj = Object();
                     .style('fill', colorMap.get(word))
                     .lower()
                     .transition()
-                    .duration(100000)
+                    .duration(500)
                     .attrTween("r", function() {
                         return d3.interpolateNumber(0, larger_rad);
                       })
