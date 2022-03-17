@@ -31,11 +31,12 @@ class Letter:
         return letter_dict
 
 class Word:
-    def __init__(self, length, game_length, offset, word=None):
+    def __init__(self, length, game_length, offset, word=None, clue=None):
         self.length = length
         self.game_length = game_length
         self.offset = offset
         self.word = word
+        self.clue = clue
         self.word_id = str(uuid4())
         self.letters = []
         first = True
@@ -69,6 +70,7 @@ class Word:
         output['word'] = self.word
         output['word_id'] = self.word_id
         output['offset'] = self.offset
+        output['clue'] = self.clue
         output['letters'] = []
         for i, letter in enumerate(self.letters):
             if not letter:
@@ -156,11 +158,11 @@ class Board:
         valid_words = self.query_db(
             f"SELECT * FROM words WHERE length(word) = {base.length}"
         )
-        print(valid_words, base.length, base)
         base_word_row = choice(valid_words)
         base_word = base_word_row[0]
-        print(base_word)
+        clue = base_word_row[-1]
         self.words[0].word = base_word
+        self.words[0].clue = clue
         i = 0
         for letter in self.words[0].letters:
             if letter:
@@ -191,6 +193,7 @@ class Board:
             new_word = choice(valid_words)
             found_words.append(new_word[0])
             word.word = new_word[0]
+            word.clue = new_word[-1]
 
             i = 0
             for letter in word.letters:
@@ -250,6 +253,7 @@ class Board:
 
 def create_cursor():
     con = sqlite3.connect("wordsDict.db")
+
     return con
 
 
